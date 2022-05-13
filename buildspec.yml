@@ -5,12 +5,12 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 10
+      nodejs: 14
   pre_build:
     commands:
       - TAG="$( echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8 )"
       - npm install
   build:
-    commands
+    commands:
+      - curl --connect-timeout 3 -f -LI https://dev.clippd.com -o /dev/null -s
       - npm run cy:run
-
