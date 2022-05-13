@@ -12,5 +12,4 @@ phases:
       - npm install
   build:
     commands:
-      - curl --connect-timeout 3 -f -LI https://dev.clippd.com -o /dev/null -s
       - npm run cy:run
