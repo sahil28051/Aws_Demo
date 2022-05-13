@@ -1,0 +1,41 @@
+{
+    "auth": {
+        "username": "aliasgarchaiwala2",
+        "access_key": "1s5EkEs3p7gKX6i5Kvay"
+    },
+    "browsers": [
+        {
+            "browser": "chrome",
+            "os": "Windows 10",
+            "versions": [
+                "latest"
+                
+            ]
+        },
+        {
+            "browser": "firefox",
+            "os": "Windows 10",
+            "versions": [
+                "latest"
+                
+            ]
+        }
+    ],
+    "run_settings": {
+        "cypress_config_file": "cypress.json",
+        "project_name": "automation-suite",
+        "build_name": "build-name",
+        "exclude": [],
+        "parallels": "5",
+        "npm_dependencies": {},
+        "package_config_options": {},
+        "headless": true
+    },
+    "connection_settings": {
+        "local": true,
+        "local_identifier": null,
+        "local_mode": null,
+        "local_config_file": null
+    },
+    "disable_usage_reporting": false
+}

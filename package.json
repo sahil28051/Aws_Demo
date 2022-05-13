@@ -1,0 +1,29 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "lambdatest-cypress run",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:clear": "if exist allure-results rmdir /q /s allure-results && if exist allure-report rmdir /q /s allure-report && if exist cypress\\screenshots rmdir /q /s cypress\\screenshots && if exist cypress\\videos rmdir /q /s cypress\\videos",
+    "pretest": "npm run allure:clear",
+    "test": "npm run cy:run || npm run posttest",
+    "posttest": "npm run allure:report"
+  },
+  "author": "sahil",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.1.0",
+    "cypress": "^9.5.2",
+    "cypress-xpath": "^1.6.2",
+    "node-xlsx": "^0.21.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.26.5",
+    "allure-commandline": "^2.17.2",
+    "cy2": "^1.3.0"
+  },
+  "keywords": [],
+  "description": ""
+}
