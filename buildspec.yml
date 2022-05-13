@@ -12,6 +12,8 @@ phases:
     commands:
       - TAG="$( echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8 )"
       - npm install -g
+      - ls
   build:
     commands:
       - npm run cy:run
+      
