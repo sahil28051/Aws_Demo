@@ -12,5 +12,5 @@ phases:
       - npm install
   build:
     commands
-      - yarn cy:run
+      - npm run cy:run
 
