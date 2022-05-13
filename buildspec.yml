@@ -11,7 +11,6 @@ phases:
       - TAG="$( echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8 )"
       - npm install
   build:
-    commands:
-      - yarn install
+    commands
       - yarn cy:run
 
