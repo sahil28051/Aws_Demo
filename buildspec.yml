@@ -15,8 +15,4 @@ phases:
       - curl --connect-timeout 3 -f -LI https://dev.clippd.com -o /dev/null -s
       - yarn install
       - yarn cy:run
-  post_build: commands:s
-    - if [ $CODEBUILD_BUILD_SUCCEEDING = 0 ]; then exit 1; fi
-    - printf '[{"name":"automation-suite","imageUri":"%s"}]' "$IMAGE_URI" > images.json
-artifacts:
-  files: images.json
+
